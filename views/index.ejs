@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <P>TO DO LIST</P>
+    </nav>
+    <div class="todo-main">
+        <div class="todo-heading">
+            <h1>
+                <%= todayDate%>
+            </h1>
+        </div>
+        <div class="todo-list">
+            <%for(let i=0;i < todayTask.length;i++){%>
+
+                <div class="todo-list-item">
+                    <input id="unique" type="checkbox">
+                    <p>
+                        <%=todayTask[i]%>
+                    </p>
+
+                </div>
+                <%}%>
+        </div>
+        <form class="todo-form" action="/" method="post">
+            <button type="submit">+</button>
+            <input type="text" placeholder="Enter task" name="task" />
+
+        </form>
+    </div>
+</body>
+
+</html>
